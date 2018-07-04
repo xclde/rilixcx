@@ -1,0 +1,4 @@
+<view class="tui-content" >
+ <view class="tui-menu-list" wx:for="{{dataList}}" wx:key>Item -- {{item}}</view>
+</view>
+

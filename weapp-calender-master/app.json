@@ -1,0 +1,36 @@
+  {
+  "pages":[    
+    "pages/calendar/calendar"  
+    ,"pages/test/test" 
+    ,"pages/addevent/addevent"
+    ,"pages/eventList/eventList"
+    ,"pages/listview/listview"
+    ,"pages/test2/test2"
+    ,"pages/eventinfo/eventinfo"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "日历",
+    "navigationBarTextStyle":"black"
+    ,"enablePullDownRefresh": true
+  }
+,
+"debug": false
+,"tabBar": {
+  "list": [
+    {
+      "pagePath": "pages/calendar/calendar",
+      "text": "首页"
+    },
+    {
+      "pagePath": "pages/listview/listview",
+      "text": "事件列表"
+    }
+    ,{
+      "pagePath": "pages/eventList/eventList",
+      "text": "首页"
+    }
+  ]
+}
+}
