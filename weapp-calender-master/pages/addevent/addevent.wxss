@@ -1,6 +1,0 @@
-/* pages/addevent/addevent.wxss */
-.calendar-root{
-    font-family: simhei;
-    /* background: #eee; */
-    height:100%;
-}
