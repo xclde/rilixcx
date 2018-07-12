@@ -1,0 +1,21 @@
+<view>
+
+  <form catchsubmit="formSubmit" catchreset="formReset">
+    <view>{{title}}</view>
+
+    标题
+    <input style='border:1px solid #f00' id="name" name="biaoti" class="login-input" type="text" placeholder="请输入标题" />
+
+    <view class="item">
+      事项内容
+
+      <textarea style='border:1px solid #f00 ;width:100%' placeholder="请输入事件内容" name="xiangq"></textarea>
+      <!-- <button formType="submit">保存</button> -->
+
+    </view>
+
+    <button type="primary" formType="submit">提交</button>
+    <button formType="reset">清空</button>
+  </form>
+
+</view>

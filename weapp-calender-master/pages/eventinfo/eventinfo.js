@@ -18,7 +18,6 @@ Page({
     const _this = this;
     _this.setData({
       movie: { title:'aaaa'}
-
     })
     // 拼接请求url
     // const url = 'https://api.douban.com/v2/movie/subject/' + options.id;
@@ -45,7 +44,7 @@ Page({
   onReady: function () {
     // 修改导航栏标题
     wx.setNavigationBarTitle({
-      title: this.data.title + '<<电影<<豆瓣'
+      title: this.data.title + '事件详情'
     })
   }
 })

@@ -1,14 +1,37 @@
 <view class="calendar-root">
   <form catchsubmit="formSubmit" catchreset="formReset">
     <view>{{title}}</view>
-  
-    标题
-    <input style='border:1px solid #f00' id="name" name="biaoti" class="login-input" type="text" placeholder="请输入标题" /> 事项内容
 
-    <textarea style='border:1px solid #f00 ;width:100%' placeholder="请输入事件内容" name="xiangq"></textarea>\n
-    <!-- <button formType="submit">保存</button> -->
+    标题
+    <input style='border:1px solid #f00' id="name" name="biaoti" class="login-input" type="text" placeholder="请输入标题" />
+
+    <view class="item">
+      <text>类别：</text>
+      <picker value="{{leibieValue}}" range="{{leibieRange}}" bindchange="leibieBindchange" style='border:1px solid'>
+        {{leibieRange[leibieValue]}}
+      </picker>
+    </view>
+    <view class="item">
+      <text>重复：</text>
+      <picker value="{{chongfuValue}}" range="{{chongfuRange}}" bindchange="chongfuBindchange" style='border:1px solid'>
+        {{chongfuRange[chongfuValue]}}
+      </picker>
+    </view>
+    <view class="item">
+      <text>提醒：</text>
+      <picker value="{{tixingValue}}" range="{{tixingRange}}" bindchange="tixingBindchange" style='border:1px solid'>
+        {{tixingRange[tixingValue]}}
+      </picker>
+    </view>
+    <view class="item">
+      事项内容
+
+      <textarea style='border:1px solid #f00 ;width:100%' placeholder="请输入事件内容" name="xiangq"></textarea>
+      <!-- <button formType="submit">保存</button> -->
+
+    </view>
+
     <button type="primary" formType="submit">Submit</button>
     <button formType="reset">Reset</button>
   </form>
 </view>
-

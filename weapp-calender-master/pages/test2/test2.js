@@ -5,7 +5,7 @@ var csh2 = "nono";
 var refreshPageData = function() {
   wx.getSavedFileList({
     success: function(res) {
-      console.log(res);
+      // console.log(res);
       var voices = [];
       for (var i = 0; i < res.fileList.length; i++) {
         //格式化时间  
@@ -22,7 +22,7 @@ var refreshPageData = function() {
         // console.log("文件大小: " + size)
         voices = voices.concat(voice);
       }
-      console.log(voices);
+      // console.log(voices);
       csh = voices
       csh2= "asd";
       // this.setData({

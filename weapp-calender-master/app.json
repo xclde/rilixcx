@@ -1,36 +1,45 @@
-  {
-  "pages":[    
-    "pages/calendar/calendar"  
-    ,"pages/test/test" 
-    ,"pages/addevent/addevent"
-    ,"pages/eventList/eventList"
-    ,"pages/listview/listview"
-    ,"pages/test2/test2"
-    ,"pages/eventinfo/eventinfo"
+{
+  "pages": [
+    "pages/calendar/calendar",
+    "pages/lidan/lidan",
+    
+    "pages/test/test",
+    "pages/addevent/addevent",
+    "pages/eventList/eventList",
+    "pages/listview/listview",
+    "pages/test2/test2",
+    "pages/eventinfo/eventinfo",
+    "pages/my/my",
+    "pages/lidanbianji/lidanbianji"
+    ,"pages/jianyi/jianyi"
+    ,"pages/search/search"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "日历",
-    "navigationBarTextStyle":"black"
-    ,"enablePullDownRefresh": true
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "debug": false,
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/calendar/calendar",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/lidan/lidan",
+        "text": "礼单薄"
+      },          
+      {
+        "pagePath": "pages/listview/listview",
+        "text": "事件列表"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
   }
-,
-"debug": false
-,"tabBar": {
-  "list": [
-    {
-      "pagePath": "pages/calendar/calendar",
-      "text": "首页"
-    },
-    {
-      "pagePath": "pages/listview/listview",
-      "text": "事件列表"
-    }
-    ,{
-      "pagePath": "pages/eventList/eventList",
-      "text": "首页"
-    }
-  ]
-}
 }

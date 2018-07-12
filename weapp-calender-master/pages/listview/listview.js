@@ -10,7 +10,13 @@ Page({
     type: '', // 数据类型
     // loading: true // 显示等待框
   },
+  addEvent: function (e) {
 
+    wx.navigateTo({
+      url: '../addevent/addevent?addDate='
+    });
+    // console.log("添加事件" + addDate);
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -116,8 +122,7 @@ Page({
         "original_title": "标题1",
         "year": "20160201"
       }],
-      type:"coming_soon"
-      , title:"列表标题"
+      type:"coming_soon"      
     })    
 
 
