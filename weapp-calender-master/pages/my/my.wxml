@@ -1,6 +1,8 @@
 <view>
   <view class="header">
-    <view > <image src=" {{avatarUrl}}" class="userImg"></image></view>
+    <view>
+      <image src=" {{avatarUrl}}" class="userImg"></image>
+    </view>
     <view class="userName">{{nickName}} </view>
   </view>
   <view class="content">

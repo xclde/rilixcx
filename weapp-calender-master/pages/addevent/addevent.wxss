@@ -4,3 +4,16 @@
     /* background: #eee; */
     height:100%;
 }
+
+/* 自写样式 */
+
+.shurubiankuang{
+  border: 1px solid #C0C0C0;
+  margin-top:5px
+}
+.jiange{
+  padding: 5px;
+}
+.ziti{
+  font-size:15px;
+}

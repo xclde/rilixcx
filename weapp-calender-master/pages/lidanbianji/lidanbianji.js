@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    dates:"2018-07-12"
+  },
+  formSubmit:function(e){
+    console.log(e);
   },
   //  点击日期组件确定事件  
   bindDateChange: function (e) {
@@ -18,7 +21,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options);
   },
 
   /**

@@ -1,9 +1,9 @@
 <view class="calendar-root">
     <view class="calendar-navbar">
         <view class="calendar-navbar-button" bindtap="goToday" >今日</view>
-        <view class="calendar-navbar-button" bindtap="goLastMonth" >{{"<"}}</view>
+        <view class="calendar-navbar-button jiantou" bindtap="goLastMonth" >{{"<"}}</view>
          <view class="calendar-navbar-date">{{date}}</view> 
-        <view class="calendar-navbar-button" bindtap="goNextMonth">{{">"}}</view>
+        <view class="calendar-navbar-button jiantou" bindtap="goNextMonth">{{">"}}</view>
         <picker class="calendar-navbar-button" mode="date" start="1900-01-01" end="2100-01-01" 
         bindchange="bindDateChange" fields="day" bindcancel="tzCancel">
             <view>跳转</view>
@@ -15,7 +15,7 @@
     <view class="calendar-body">
         <view class="calendar-body-rows" wx:for="123456" wx:for-index="row" wx:key="*this">
             <view class="calendar-body-cols" wx:for="1234567" wx:for-index="col" wx:key="*this">                
-                <view class="calendar-body-item" wx:if="{{arrIsShow[row * 7 + col]}}" data-day-index="{{row * 7 + col}}" bindtap="selectDay" >
+                <view class="calendar-body-item {{arrIsSel[row * 7 + col]?'is_checked':''}}" wx:if="{{arrIsShow[row * 7 + col]}}" data-day-index="{{row * 7 + col}}" bindtap="selectDay">
                     <view class="calendar-body-day">
                          {{arrDays[row * 7 + col]}} 
                     </view>
@@ -24,10 +24,7 @@
                     </view>
                     <!-- <view wx:if="{{arrIsSel[row * 7 + col] }}">today</view> -->
                 </view>
-
                 <!-- <view wx:else>a</view> -->
-
-
             </view>
         </view>
     </view>
@@ -35,9 +32,7 @@
         <view class="calendar-detail-day">{{detailData.curDay}}</view>
         <view class="calendar-detail-info1">{{detailData.curInfo1}}</view>
         <view class="calendar-detail-info2">{{detailData.curInfo2}}</view>
-    </view>
-    
-    
+    </view>        
 </view>
 
-<button style='width:50%; margin:15px 80px ' bindtap='addEvent'>添加事件</button>
+<button style='width:50%; margin:15px 80px 0 80px ; ' bindtap='addEvent'>添加事件</button>

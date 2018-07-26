@@ -1,4 +1,11 @@
 /* pages/list/list.wxss */
+.gudingan{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 30px;
+  
+}
 .page-header {
   display: flex;
   justify-content: center;

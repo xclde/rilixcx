@@ -1,26 +1,27 @@
-<view class="calendar-root">
+<view class="calendar-root jiange">
   <form catchsubmit="formSubmit" catchreset="formReset">
-    <view>{{title}}</view>
-
-    姓名
-    <input style='border:1px solid #f00' id="name" name="biaoti" class="login-input" type="text" placeholder="请输入标题" />
-
-    <view class="picker">
-      日期:
-      <picker mode="date" value="2018-09-18" start="1978-01-01" end="2099-1-23" bindchange="bindDateChange">asdasd {{dates}} </picker>
+    <view class='ziti'>
+      <text>姓名</text>
+      <input class='shurubiankuang' name="biaoti" type="text" placeholder="请输入姓名" />
     </view>
-    <view class="picker">
-      礼金：
-      <input value='10元' style='border:1px solid red'></input>
+    <view class="ziti">
+      <text>日期:</text>
+      <picker class='shurubiankuang' mode="date" value="2018-09-18" start="1978-01-01" end="2099-1-23" bindchange="bindDateChange">
+        {{dates}} </picker>
     </view>
-    <view class="picker">
-      礼物：
-      <input value='某某手表' style='border:1px solid red'></input>
+    <view class='ziti'>
+      <text>礼金：</text>
+      <input class='shurubiankuang' value='10元'></input>
     </view>
-    事项内容
-    <textarea style='border:1px solid #f00 ;width:100%' placeholder="请输入事件内容" name="xiangq"></textarea>\n
-    <!-- <button formType="submit">保存</button> -->
-    <button type="primary" formType="submit">Submit</button>
-    <button formType="reset">Reset</button>
+    <view class='ziti'>
+      <text>礼物：</text>
+      <input value='某某手表' class='shurubiankuang'></input>
+    </view>
+    <!-- 事项内容
+    <textarea style='border:1px solid #f00 ;width:100%' placeholder="请输入事件内容" name="xiangq"></textarea>\n -->
+    <view style='margin-top:15px'>
+      <button type="primary" formType="submit ">提交</button>
+      <button formType="reset">清空</button>
+    </view>
   </form>
 </view>

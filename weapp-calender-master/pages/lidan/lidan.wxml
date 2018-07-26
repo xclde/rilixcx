@@ -11,6 +11,8 @@
     <view data-index="1" bindtap="onTapTag" class="sort {{selected == 1?'sort-active':''}}">
       送出记录
     </view>
+    <button style='font-size: 20px;background:white;' class="mini-btn" type="default" size="mini" bindtap="navigateTo">+</button>
+    <!-- <icon type="clear" class="searchIcon" size="14" color="#3333ff" bindtap="hideSearchView"  /> -->
     <!-- <view class="sort"
       bindtap="onFilter">筛选
       <image src="/pages/images/screen.png" 
@@ -62,28 +64,27 @@ hidden="{{mask2Hidden}}" bindtap="mask2Cancel">
   </view>
 </view> -->
 
-<button open-type='getUserInfo' >获取授权</button>
- <view class="searchInput">
-    <icon type="search" class="searchIcon" size="14" color="#3333ff" />
-    <input type="text" maxlength="12" placeholder="输入关键字" placeholder-class="placeholder" bindfocus="onBindfocus" bindchange="onBindchang" value='{{sousuozi}}' confirm-type="search"/>
-    <icon type="clear" class="searchIcon" size="14" color="#3333ff" bindtap="hideSearchView" wx:if="{{searchShow}}" />
-  </view>
+<button open-type='getUserInfo'>获取授权</button>
+<view class="searchInput">
+  <icon type="search" class="searchIcon" size="14" color="#C0C0C0" />
+  <input type="text" maxlength="12" placeholder="输入关键字" placeholder-class="placeholder" bindfocus="onBindfocus" bindchange="onBindchang" value='{{sousuozi}}' confirm-type="search" />
+  <icon type="clear" class="searchIcon" size="14" color="#C0C0C0" bindtap="hideSearchView" wx:if="{{searchShow}}" />
+</view>
 
 
-  <view wx:if="{{bodyShow}}">
-<scroll-view bindscrolltolower="lower" class="scroll-restaurants-list" scroll-y="true" style="height:100%">
-  <!-- <view class="header-title">附近商家</view> -->
-  <!-- <view class="heard">
+<view wx:if="{{bodyShow}}">
+  <scroll-view bindscrolltolower="lower" class="scroll-restaurants-list" scroll-y="true" style="height:100%">
+    <!-- <view class="header-title">附近商家</view> -->
+    <!-- <view class="heard">
     <view class="heard-search">
       <image src="/pages/images/search.png" class="heard-search-icon" />
     </view>
   </view> -->
 
 
- 
 
 
-  <!-- <swiper class="categoryList" indicator-dots="true" 
+    <!-- <swiper class="categoryList" indicator-dots="true" 
   indicator-color="rgba(228,228,228,1)" 
   indicator-active-color="#FECA49">
     <block wx:for="{{categoryList}}" wx:key="">
@@ -99,36 +100,33 @@ hidden="{{mask2Hidden}}" bindtap="mask2Cancel">
     </block>
   </swiper> -->
 
-  <template is="sort_list" data="{{selected,sortSelected}}" />
-  <view class="restaurantsList">
-    <block wx:for="{{restaurant}}" wx:key="">
-      <navigator url="/pages/lidanbianji/lidanbianji">
-        <view class="restaurants-list">
-          <!-- <view class="restaurants-info-image">
-            <image src="{{item.src}}" class="restaurants-image"/>
-          </view> -->
-          <view class="restaurants-info">
-            <view class="restaurants-info-name">{{item.name}}</view>
-            <view class="restaurants-info-rating">
-              <view class="restaurants-info-rating-stars">★ ★ ★ ★</view>
-              <view class="restaurants-info-rating-sales">月售 {{item.sales}}单</view>
+    <template is="sort_list" data="{{selected,sortSelected}}" />
+    <view class="restaurantsList">
+      <block wx:for="{{restaurant}}" wx:key="">
+        <navigator url="/pages/lidanbianji/lidanbianji?id={{item.name}}">
+          <view class="restaurants-list">
+            <view class="restaurants-info">
+              <view class="restaurants-info-name">{{item.name}}</view>
+              <!-- <view class="restaurants-info-rating">
+                <view class="restaurants-info-rating-stars">★ ★ ★ ★</view>
+                <view class="restaurants-info-rating-sales">月售 {{item.sales}}单</view>
+              </view> -->
+              <view class="restaurants-info-price">
+                起送 {{item.initial_price}}¥ | 配送 {{item.distribution_price}}¥
+              </view>
             </view>
-            <view class="restaurants-info-price">
-              起送 {{item.initial_price}}¥ | 配送 {{item.distribution_price}}¥
-            </view>
-          </view>
-          <view class="restaurants-distribution">
-            <view class="restaurants-distribution-distance">
-              {{item.distance}}
-            </view>
-            <view class="restaurants-distribution-time">
-              {{item.time}} 分钟
+            <view class="restaurants-distribution">
+              <view class="restaurants-distribution-distance">
+                {{item.distance}}
+              </view>
+              <!-- <view class="restaurants-distribution-time">
+                {{item.time}} 分钟
+              </view> -->
             </view>
           </view>
-        </view>
-      </navigator>
-    </block>
-  </view>
-</scroll-view>
+        </navigator>
+      </block>
+    </view>
+  </scroll-view>
 
 </view>

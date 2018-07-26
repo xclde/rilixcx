@@ -1,6 +1,5 @@
 // pages/home/home.js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -17,22 +16,22 @@ Page({
     //   text: "跨天预定"
     // }],
     bodyShow: true,
-    sortList: [{
-      sort: "综合排序",
-      image: "",
-    }, {
-      sort: "速度最快",
-      image: "",
-    }, {
-      sort: "评分最高",
-      image: "",
-    }, {
-      sort: "起送价最低",
-      image: "",
-    }, {
-      sort: "配送费最低",
-      image: "",
-    }],
+    // sortList: [{
+    //   sort: "综合排序",
+    //   image: "",
+    // }, {
+    //   sort: "速度最快",
+    //   image: "",
+    // }, {
+    //   sort: "评分最高",
+    //   image: "",
+    // }, {
+    //   sort: "起送价最低",
+    //   image: "",
+    // }, {
+    //   sort: "配送费最低",
+    //   image: "",
+    // }],
     // discountList: [{
     //   icon: "减",
     //   iconColor: "#FF635B",
@@ -124,6 +123,9 @@ Page({
     selectedNumb: 0,
     sortSelected: "综合排序"
   },
+  navigateTo: function () {
+    wx.navigateTo({ url: '../lidanbianji/lidanbianji' })
+  },
   //当搜索输入框放生改变时，执行。
   onBindchang: function(event) {
 
@@ -165,7 +167,7 @@ Page({
         "Content-Type": "application/xml"
       },
       success: function(res) {
-        console.log(res);
+        // console.log(res);
         //调用电影信息提取函数
         that.movieData(res.data, movieKey);
       },
@@ -252,7 +254,7 @@ Page({
   //   }
   // },
   onTapTag: function(e) {    
-    console.log(e.currentTarget.dataset.index);
+    // console.log(e.currentTarget.dataset.index);
     this.setData({
       selected: e.currentTarget.dataset.index
     });
@@ -305,6 +307,9 @@ Page({
   onShow: function() {
     var that = this;
     that.setData({
+      searchShow: false, //隐藏搜速框的×
+      sousuozi: '',      //清空搜索条件
+      selected:'3',      //清空筛选调教
       restaurant: [{
           "name": "韩式炸鸡",
           "sales": "45",

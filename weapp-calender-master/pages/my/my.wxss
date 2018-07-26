@@ -1,10 +1,11 @@
 page{
   font-size: 30rpx;
-  background: #ECECEC;
+   /* background: #ECECEC;  */
+   background:white
 }
 .header{
   height: 300rpx;
-  background: #FFD161;
+  /* background: #FFD161; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,13 +15,14 @@ page{
   width: 120rpx;
   height: 120rpx;
   border-radius:120rpx;
-  border: 8rpx solid yellow; 
+  border: 8rpx solid #F8F8F8; 
   margin-bottom: 30rpx;
 }
 
 .content .coupon,.content .signOut,
 .content .address,.content .tel{
-  background: white;
+  background:  	#F0F0F0;
+  /* border: 8rpx solid #C0C0C0; */
   height: 70rpx;
   line-height: 70rpx;
   padding-left: 15rpx; 

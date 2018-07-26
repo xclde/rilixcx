@@ -1,3 +1,11 @@
+.mini-btn{
+  margin-right: 5rpx;  
+ 
+}
+
+
+/* ------------------------- */
+
 .heard-location-text{
   position: absolute;
   overflow: hidden;

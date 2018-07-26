@@ -1,3 +1,15 @@
+.is_checked{
+  border: 1px solid #FE0002 ;
+  color: #FE0002 ;
+  background: red;
+}
+
+.abc{
+  border: 5px solid #FE0002 ;
+  color:red ;
+  background: red;
+}
+/* -------------------- */
 .calendar-root{
     font-family: simhei;
     background: #eee;
@@ -17,6 +29,9 @@
     height: 50rpx;
     text-align: center;
     font-size: 30rpx;
+}
+.jiantou{
+  font-size: 40rpx;
 }
 .calendar-navbar-date{
     flex-grow: 1;
@@ -70,25 +85,26 @@
 }
 
 .calendar-detail{
-    background: #fff;
+    background: #fff;  
+    
 }
 .calendar-detail-day{
     display:inline;
     position: absolute;
-    margin-left: 80rpx;
+    margin-left: 140rpx;
     font-size: 100rpx;
     font-weight: bold;
     color: red;
 }
 .calendar-detail-info1{
-    margin-left: 210rpx;
+    margin-left: 270rpx;
     padding-top: 10rpx;
     padding-bottom: 10rpx;
     font-size: 30rpx;
     font-weight: bold;
 }
 .calendar-detail-info2{
-    margin-left: 210rpx;
+    margin-left: 270rpx;
     padding-top: 10rpx;
     padding-bottom: 10rpx;
     font-size: 25rpx;

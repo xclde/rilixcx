@@ -15,6 +15,16 @@ Page({
     tixingValue: 0,
     tixingRange: ['无', '准时', '提前一天09:00', '提前一周09:00', '提前两周9:00'],
   },
+  bindDateChange:function(e){
+    var riqi = e.detail.value.split("-");
+
+    // console.log();
+    this.setData({
+      title: riqi[0] + "年" + riqi[1] + "月" + riqi[2] + "日"
+    })
+    
+
+  },
   normalPickerBindchange: function (e) {
     this.setData({
       picker1Value: e.detail.value

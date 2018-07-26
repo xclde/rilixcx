@@ -1,15 +1,19 @@
 {
   "pages": [
-    "pages/calendar/calendar",
     "pages/lidan/lidan",
+    "pages/listview/listview",
+    "pages/my/my",
     
+    
+    "pages/calendar/calendar",    
+            
     "pages/test/test",
     "pages/addevent/addevent",
     "pages/eventList/eventList",
-    "pages/listview/listview",
+    
     "pages/test2/test2",
     "pages/eventinfo/eventinfo",
-    "pages/my/my",
+    
     "pages/lidanbianji/lidanbianji"
     ,"pages/jianyi/jianyi"
     ,"pages/search/search"
@@ -25,13 +29,9 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/calendar/calendar",
-        "text": "首页"
-      },
-      {
         "pagePath": "pages/lidan/lidan",
         "text": "礼单薄"
-      },          
+      },      
       {
         "pagePath": "pages/listview/listview",
         "text": "事件列表"
@@ -39,7 +39,12 @@
       {
         "pagePath": "pages/my/my",
         "text": "我的"
-      }
+      },                
+      {
+        "pagePath": "pages/calendar/calendar",
+        "text": "首页"
+      }                               
+      
     ]
   }
 }

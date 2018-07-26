@@ -1,37 +1,39 @@
 <view class="calendar-root">
   <form catchsubmit="formSubmit" catchreset="formReset">
-    <view>{{title}}</view>
-
-    标题
-    <input style='border:1px solid #f00' id="name" name="biaoti" class="login-input" type="text" placeholder="请输入标题" />
-
-    <view class="item">
-      <text>类别：</text>
-      <picker value="{{leibieValue}}" range="{{leibieRange}}" bindchange="leibieBindchange" style='border:1px solid'>
+  <picker class="calendar-navbar-button" mode="date" start="1900-01-01" end="2100-01-01" 
+        bindchange="bindDateChange" fields="day" bindcancel="tzCancel">
+    <view class='jiange ziti'>{{title}}</view>
+    </picker>
+    <view class='jiange ziti'>
+      <text class=''>标题</text>
+      <input style='' id="name" name="biaoti" class="shurubiankuang" type="text" placeholder="请输入标题" style='margin-top:5px' />
+    </view>
+    <view class='jiange ziti'>
+      <text class=''>类别：</text>
+      <picker value="{{leibieValue}}" range="{{leibieRange}}" bindchange="leibieBindchange" class='shurubiankuang'>
         {{leibieRange[leibieValue]}}
       </picker>
     </view>
-    <view class="item">
-      <text>重复：</text>
-      <picker value="{{chongfuValue}}" range="{{chongfuRange}}" bindchange="chongfuBindchange" style='border:1px solid'>
+    <view class='jiange ziti'>
+      <text class=''>重复：</text>
+      <picker value="{{chongfuValue}}" range="{{chongfuRange}}" bindchange="chongfuBindchange" class='shurubiankuang'>
         {{chongfuRange[chongfuValue]}}
       </picker>
     </view>
-    <view class="item">
-      <text>提醒：</text>
-      <picker value="{{tixingValue}}" range="{{tixingRange}}" bindchange="tixingBindchange" style='border:1px solid'>
+    <view class="jiange ziti">
+      <text class=''>提醒：</text>
+      <picker value="{{tixingValue}}" range="{{tixingRange}}" bindchange="tixingBindchange" class='shurubiankuang' 
+      >
         {{tixingRange[tixingValue]}}
       </picker>
     </view>
-    <view class="item">
-      事项内容
-
-      <textarea style='border:1px solid #f00 ;width:100%' placeholder="请输入事件内容" name="xiangq"></textarea>
+    <view class="jiange ziti">
+      <text class=''>事项内容</text>
+      <textarea style='width:99%' class='shurubiankuang' placeholder="请输入事件内容" name="xiangq"></textarea>
       <!-- <button formType="submit">保存</button> -->
-
     </view>
 
-    <button type="primary" formType="submit">Submit</button>
-    <button formType="reset">Reset</button>
+    <button type="primary" formType="submit">提交</button>
+    <button formType="reset">清空</button>
   </form>
 </view>
